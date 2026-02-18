@@ -148,7 +148,8 @@ claude-blog/
 │   └── MCP-INTEGRATION.md
 ├── install.sh                          # Unix/macOS installer
 ├── install.ps1                         # Windows PowerShell installer
-├── uninstall.sh                        # Clean removal
+├── uninstall.sh                        # Unix/macOS uninstaller
+├── uninstall.ps1                       # Windows PowerShell uninstaller
 ├── requirements.txt                    # Python dependencies
 ├── CHANGELOG.md
 ├── TODO.md
@@ -164,8 +165,14 @@ claude-blog/
 
 ## Uninstall
 
+Unix/macOS:
 ```bash
 chmod +x uninstall.sh && ./uninstall.sh
+```
+
+Windows (PowerShell):
+```powershell
+.\uninstall.ps1
 ```
 
 ## Integration
