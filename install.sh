@@ -43,7 +43,7 @@ main() {
     mkdir -p "${SKILL_DIR}/blog/references"
     mkdir -p "${SKILL_DIR}/blog/templates"
     mkdir -p "${SKILL_DIR}/blog/scripts"
-    for skill in blog-write blog-rewrite blog-analyze blog-brief blog-calendar blog-strategy blog-outline blog-seo-check blog-schema blog-repurpose blog-geo blog-audit; do
+    for skill in blog-write blog-rewrite blog-analyze blog-brief blog-calendar blog-strategy blog-outline blog-seo-check blog-schema blog-repurpose blog-geo blog-audit blog-chart; do
         mkdir -p "${SKILL_DIR}/${skill}"
     done
     mkdir -p "${AGENT_DIR}"
@@ -104,7 +104,7 @@ main() {
     echo ""
     echo "  Installed:"
     echo "    Main skill:   blog/ (orchestrator + references + templates)"
-    echo "    Sub-skills:   12 commands"
+    echo "    Sub-skills:   13 (12 commands + 1 internal)"
     echo "    Agents:       4 specialists"
     echo "    Scripts:      analyze_blog.py"
     echo ""

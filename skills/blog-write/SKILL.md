@@ -4,7 +4,7 @@ description: >
   Write new blog articles from scratch optimized for Google rankings and AI
   citations. Generates full articles with template selection, answer-first
   formatting, TL;DR box, information gain markers, citation capsules, sourced
-  statistics, Pixabay/Unsplash images, SVG charts via /svg skill, FAQ schema,
+  statistics, Pixabay/Unsplash images, built-in SVG chart generation, FAQ schema,
   internal linking zones, and proper heading hierarchy. Supports MDX, markdown,
   and HTML output.
   Use when user says "write blog", "new blog post", "create article",
@@ -85,7 +85,7 @@ Spawn a `blog-researcher` agent (or do inline research with WebSearch):
    - Alternative: `site:unsplash.com [topic] wide`
    - Fallback: `site:pexels.com [topic] wide banner`
    - Target dimensions: 1200x630 (OG-compatible) or 1920x1080
-   - Or generate a custom SVG cover via `/svg` (text-on-gradient with key stat)
+   - Or generate a custom SVG cover via `blog-chart` (text-on-gradient with key stat)
    - See `references/visual-media.md` for cover image sizing details
 3. **Find 3-5 inline images** from open-source platforms:
    - **Pixabay** (preferred): Search `site:pixabay.com [topic keywords]`
@@ -157,17 +157,16 @@ adapt this skeleton to match the template's section structure:
 
 Present the outline to the user for approval before writing.
 
-### Phase 4: Chart Generation
+### Phase 4: Chart Generation (Built-In)
 
-Generate 2-4 SVG charts using `/svg-chart` skill.
+When the researcher identifies chart-worthy data (3+ comparable metrics, trend data,
+before/after comparisons):
 
-For each chart, invoke `/svg-chart` with:
-- Exact data values with sources
-- Chart type (ensure diversity — never repeat a type)
-- If platform is MDX: request JSX-compatible SVG (camelCase attributes)
-- Save location: `/tmp/chart-<descriptive-name>.svg`
-
-After generation, read the SVG and prepare for embedding.
+1. Select chart type using the diversity rule (no repeated types per post)
+2. Invoke `blog-chart` sub-skill with: chart type, title, data values, source, platform format
+3. Embed the returned SVG directly in the post within a `<figure>` wrapper
+4. Target 2-4 charts per 2,000-word post
+5. Distribute charts evenly — never cluster them
 
 See `references/visual-media.md` for chart type selection and styling rules.
 

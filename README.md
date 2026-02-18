@@ -11,7 +11,7 @@ Strategy, briefs, calendars, writing, optimization, schema, repurposing, and ful
 ![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-blueviolet)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 ![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue)
-![Sub-Skills](https://img.shields.io/badge/Sub--Skills-12-orange)
+![Sub-Skills](https://img.shields.io/badge/Sub--Skills-13-orange)
 
 ---
 
@@ -81,8 +81,9 @@ Every article targets both Google rankings and AI citation platforms:
 
 ### Visual Media
 - Pixabay/Unsplash/Pexels image sourcing with alt text
-- SVG chart generation via `/svg-chart` (bar, lollipop, donut, line, area)
+- Built-in SVG chart generation (bar, grouped bar, lollipop, donut, line, area, radar)
 - Image density targets by content type
+- Image URL verification (HTTP 200 check before embedding)
 
 ### Platform Support
 Next.js/MDX, Astro, Hugo, Jekyll, WordPress, Ghost, 11ty, Gatsby, and static HTML.
@@ -119,7 +120,7 @@ claude-blog/
 │       ├── news-analysis.md
 │       ├── data-research.md
 │       └── faq-knowledge.md
-├── skills/                             # 12 sub-skills
+├── skills/                             # 13 sub-skills
 │   ├── blog-write/SKILL.md
 │   ├── blog-rewrite/SKILL.md
 │   ├── blog-analyze/SKILL.md
@@ -131,7 +132,8 @@ claude-blog/
 │   ├── blog-schema/SKILL.md
 │   ├── blog-repurpose/SKILL.md
 │   ├── blog-geo/SKILL.md
-│   └── blog-audit/SKILL.md
+│   ├── blog-audit/SKILL.md
+│   └── blog-chart/SKILL.md            # Internal: SVG chart generation
 ├── agents/                             # 4 specialized agents
 │   ├── blog-researcher.md
 │   ├── blog-writer.md
@@ -177,11 +179,12 @@ Windows (PowerShell):
 
 ## Integration
 
-Works with the broader Claude Code skill ecosystem:
+Chart generation is built-in — no external dependencies required for full functionality.
+
+**Optional companion skills** (for deeper analysis of published pages):
 
 | Skill | Integration |
 |-------|-------------|
-| `/svg` or `/svg-chart` | Generate SVG data visualizations for blog posts |
 | `/seo` | Deep SEO analysis of published blog pages |
 | `/seo-schema` | Schema markup validation and generation |
 | `/seo-geo` | AI citation optimization audit |

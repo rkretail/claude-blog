@@ -139,6 +139,22 @@ To avoid AI-detectable writing:
   "dive into", "game-changer", "navigate the landscape", "revolutionize",
   "seamlessly", "cutting-edge", "harness the power of", "leverage" (as verb)
 
+## Post-Draft Readability Check
+
+After completing the full draft, before returning content:
+
+1. Self-check readability:
+   - Count average sentence length (target: 15-20 words)
+   - Verify no paragraph exceeds 100 words (hard limit)
+   - Check for passive voice clusters -- rewrite to active
+   - Replace jargon with plain alternatives where possible
+2. If `analyze_blog.py` is accessible, run a quick check:
+   `python3 ~/.claude/skills/blog/scripts/analyze_blog.py <draft_file> --category content`
+3. If readability sub-score is below 4/6, revise before returning:
+   - Split sentences over 25 words
+   - Break paragraphs over 60 words
+   - Convert passive to active voice
+
 ## Quality Self-Check
 
 Before returning content, verify:
@@ -156,3 +172,6 @@ Before returning content, verify:
 - [ ] No known AI-detectable phrases
 - [ ] Citation capsules in major sections
 - [ ] Internal linking zones marked
+- [ ] Every embedded image URL was verified by the researcher (Verified column = Yes)
+- [ ] No page URLs used as image src -- only direct CDN/image file URLs
+- [ ] Image alt text is a full descriptive sentence (not just keywords)

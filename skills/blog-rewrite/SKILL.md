@@ -4,7 +4,7 @@ description: >
   Rewrite and optimize existing blog posts for Google rankings (December 2025
   Core Update, E-E-A-T) and AI citations (GEO/AEO). Replaces fabricated statistics
   with sourced data, applies answer-first formatting, adds Pixabay/Unsplash
-  images, generates SVG charts via /svg skill, injects FAQ schema, performs
+  images, generates built-in SVG charts, injects FAQ schema, performs
   AI content detection, adds citation capsules and information gain markers,
   and updates freshness signals. Works with any blog format (MDX, markdown, HTML).
   Use when user says "rewrite blog", "optimize blog", "update blog",
@@ -96,10 +96,16 @@ Wait for user approval before proceeding.
    - Identify data suitable for visualization
    - Select diverse chart types
 
-### Phase 3: Chart Generation (If Needed)
+### Phase 3: Chart Generation (Built-In)
 
-Generate charts via `/svg-chart` if the post needs more visual elements.
-See `references/visual-media.md` for requirements.
+When the post needs more visual elements, invoke the `blog-chart` sub-skill:
+
+1. Select chart type using the diversity rule (no repeated types per post)
+2. Pass: chart type, title, data values, source, platform format
+3. Embed the returned SVG directly within a `<figure>` wrapper
+4. Target 2-4 charts per 2,000-word post
+
+See `references/visual-media.md` for chart type selection and styling rules.
 
 ### Phase 4: Content Rewrite
 
@@ -117,7 +123,7 @@ Apply changes in this order:
 - Fix meta description: fact-dense, 150-160 chars, includes 1 statistic
 - Add `coverImage` + `coverImageAlt` + `ogImage` if missing
   - Search Pixabay/Unsplash/Pexels for wide hero image (1200x630)
-  - Or generate custom SVG via `/svg` (text-on-gradient with key stat)
+  - Or generate custom SVG cover via `blog-chart` (text-on-gradient with key stat)
 - Verify tags/categories are appropriate
 
 #### 4c. Apply Answer-First Formatting

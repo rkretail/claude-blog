@@ -49,7 +49,7 @@ function Main {
     New-Item -ItemType Directory -Force -Path (Join-Path $SkillDir "blog" "scripts") | Out-Null
     New-Item -ItemType Directory -Force -Path $AgentDir | Out-Null
 
-    foreach ($skill in @("blog-write", "blog-rewrite", "blog-analyze", "blog-brief", "blog-calendar", "blog-strategy", "blog-outline", "blog-seo-check", "blog-schema", "blog-repurpose", "blog-geo", "blog-audit")) {
+    foreach ($skill in @("blog-write", "blog-rewrite", "blog-analyze", "blog-brief", "blog-calendar", "blog-strategy", "blog-outline", "blog-seo-check", "blog-schema", "blog-repurpose", "blog-geo", "blog-audit", "blog-chart")) {
         New-Item -ItemType Directory -Force -Path (Join-Path $SkillDir $skill) | Out-Null
     }
 
@@ -118,7 +118,7 @@ function Main {
 
     Write-Color White "Installed:"
     Write-Color Green "  Main skill:   blog/ (orchestrator + 12 references + 12 templates)"
-    Write-Color Green "  Sub-skills:   12 commands"
+    Write-Color Green "  Sub-skills:   13 (12 commands + 1 internal)"
     Write-Color Green "  Agents:       4 specialists"
     Write-Color Green "  Scripts:      analyze_blog.py"
     Write-Color White ""

@@ -6,7 +6,7 @@ description: >
   (December 2025 Core Update, E-E-A-T) and AI citations (GEO/AEO). Writes,
   rewrites, analyzes, outlines, audits, and repurposes blog content with
   answer-first formatting, sourced statistics, Pixabay/Unsplash/Pexels images,
-  SVG charts via /svg skill, JSON-LD schema generation, and freshness signals.
+  built-in SVG chart generation, JSON-LD schema generation, and freshness signals.
   Supports any platform (WordPress, Next.js MDX, Hugo, Ghost, Astro, Jekyll,
   11ty, Gatsby, HTML). Use when user says "blog", "write blog", "blog post",
   "blog strategy", "content brief", "editorial calendar", "analyze blog",
@@ -99,7 +99,7 @@ Every blog post targets these 6 optimization pillars:
 |--------|--------|---------------|
 | Answer-First Formatting | +340% AI citations | Every H2 opens with 40-60 word stat-rich paragraph |
 | Real Sourced Data | E-E-A-T trust | Tier 1-3 sources only, inline attribution |
-| Visual Media | Engagement + citations | Pixabay/Unsplash images + SVG charts via `/svg` |
+| Visual Media | Engagement + citations | Pixabay/Unsplash images + built-in SVG chart generation |
 | FAQ Schema | +28% AI citations | Structured FAQ with 40-60 word answers |
 | Content Structure | AI extractability | 50-150 word chunks, question headings, proper H hierarchy |
 | Freshness Signals | 76% of top citations | Updated within 30 days, dateModified schema |
@@ -194,6 +194,7 @@ Templates are in `templates/` and contain section structure, markers, and checkl
 | `blog-repurpose` | Cross-platform repurposing (social, email, YouTube, Reddit) |
 | `blog-geo` | AI citation readiness audit with 0-100 GEO score |
 | `blog-audit` | Full-site blog health assessment with parallel subagents |
+| `blog-chart` | Generate inline SVG data visualization charts with dark-mode styling |
 
 ## Agents
 
@@ -239,16 +240,20 @@ Standard execution order for `/blog write`:
 For `/blog analyze`, only steps 1 and 6 run (read + score).
 For `/blog audit`, step 6 runs in parallel across all posts in the directory.
 
-## Integration with Other Skills
+### Internal Workflows (Not User-Facing Commands)
 
-- **`/svg` or `/svg-chart`**: Generate dark-mode SVG charts for data visualization
-- **`/seo`**: Deep SEO analysis of published blog pages
-- **`/seo-schema`**: Schema markup validation and generation
-- **`/seo-geo`**: AI citation optimization audit
+The `blog-chart` sub-skill is invoked internally by `blog-write` and `blog-rewrite`
+when chart-worthy data is identified. It is not a standalone slash command.
+Users do not need to call it directly.
 
-Use `/svg` inline during `blog-write` when data points warrant a chart. The blog skill
-automatically identifies chart-worthy data (3+ comparable metrics, trend data, before/after
-comparisons) and calls `/svg` to generate inline SVG with dark-mode styling.
+## Integration
+
+Chart generation is built-in — no external dependencies required for full functionality.
+
+**Optional companion skills** (for deeper analysis of published pages):
+- `/seo` — Full SEO audit of published blog pages
+- `/seo-schema` — Schema markup validation and generation
+- `/seo-geo` — AI citation optimization audit
 
 ## Anti-Patterns (Never Do These)
 

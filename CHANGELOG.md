@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-02-18
+
+### Added
+- **Built-in SVG chart generation** (`blog-chart` sub-skill) — eliminates external `/svg` dependency
+  - Supports 7 chart types: horizontal bar, grouped bar, donut, line, lollipop, area, radar
+  - Dark-mode compatible, accessible (WCAG), platform-aware (HTML/JSX auto-detection)
+- **Image URL verification** in researcher agent — validates HTTP 200 before embedding
+- **Mid-writing readability check** in writer agent — self-checks Flesch targets before returning
+- **Image density guidelines** by content type in visual-media.md
+
+### Changed
+- claude-blog is now fully self-contained — no external skill dependencies required
+- Integration section updated to list companion skills as optional
+- Installer scripts updated for 13 sub-skills
+
+### Removed
+- External `/svg` / `/svg-chart` skill dependency
+
 ## [1.0.0] - 2026-02-18
 
 ### Added

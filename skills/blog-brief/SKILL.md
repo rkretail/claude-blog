@@ -126,7 +126,7 @@ what the searcher wants]
 - **Format**: [Markdown/MDX/HTML]
 - **H2 sections**: [6-8]
 - **Images**: 3-5 from Pixabay/Unsplash
-- **Charts**: 2-4 via /svg-chart (diverse types)
+- **Charts**: 2-4 via built-in blog-chart (diverse types)
 - **FAQ items**: 3-5
 
 ## Recommended Title

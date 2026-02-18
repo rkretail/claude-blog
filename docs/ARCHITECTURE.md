@@ -186,7 +186,7 @@ Code's context as a CLI tool. Provides:
       |
       +-- Presents outline for user approval
       |
-      +-- Invokes: /svg-chart (2-4 charts)
+      +-- Invokes: blog-chart (2-4 charts, built-in)
       |
       +-- Spawns: blog-writer agent
       |   |
