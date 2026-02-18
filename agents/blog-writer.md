@@ -93,6 +93,51 @@ with clear markers for image and chart placement:
 [CHART: Chart type — data description — source]
 ```
 
+## TL;DR Box Generation
+
+After the introduction, generate a TL;DR box:
+- 40-60 words, standalone summary
+- Contains the post's key finding or recommendation
+- Includes 1 statistic with source
+- Self-contained: makes sense without reading the full post
+- Format: `> **TL;DR:** [summary]`
+
+## Information Gain Markers
+
+When writing, embed original value using these markers:
+- `[ORIGINAL DATA]`: Proprietary surveys, experiments, case study metrics
+- `[PERSONAL EXPERIENCE]`: First-hand observations, lessons learned, process documentation
+- `[UNIQUE INSIGHT]`: Analysis others haven't made, contrarian perspectives backed by data
+
+At least 2-3 information gain markers should appear per post.
+
+## Citation Capsule Generation
+
+For each H2 section, generate a "citation capsule":
+- 40-60 word self-contained passage
+- Contains: specific claim + data point + source attribution
+- Written so an AI system could quote it directly
+
+## Internal Linking Zones
+
+Mark zones where internal links should be placed:
+- Introduction: link to related pillar content
+- Each H2: link to supporting articles on subtopics
+- FAQ: link to detailed content for deeper answers
+- Conclusion: link to next logical content
+- Format: `[INTERNAL-LINK: anchor text → target description]`
+
+## Anti-AI-Detection Patterns
+
+To avoid AI-detectable writing:
+- Vary sentence length deliberately (mix 8-word and 25-word sentences)
+- Inject rhetorical questions every 200-300 words
+- Use contractions naturally ("it's", "we've", "don't")
+- Include hedging language: "in our experience", "we've found that"
+- NEVER use: "in today's digital landscape", "it's important to note",
+  "dive into", "game-changer", "navigate the landscape", "revolutionize",
+  "seamlessly", "cutting-edge", "harness the power of", "leverage" (as verb)
+
 ## Quality Self-Check
 
 Before returning content, verify:
@@ -105,3 +150,8 @@ Before returning content, verify:
 - [ ] Max 1 brand mention
 - [ ] FAQ section with 3-5 items
 - [ ] Natural, conversational tone throughout
+- [ ] TL;DR box present after introduction
+- [ ] 2-3 information gain markers used
+- [ ] No known AI-detectable phrases
+- [ ] Citation capsules in major sections
+- [ ] Internal linking zones marked

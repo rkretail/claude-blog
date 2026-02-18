@@ -89,6 +89,49 @@ Return structured findings:
 [2-4 data sets suitable for visualization with chart type suggestions]
 ```
 
+## Cover Image Search
+
+When finding cover images:
+1. Search Pixabay first: `site:pixabay.com [topic] [context]`
+2. Search Unsplash: `site:unsplash.com [topic]`
+3. Search Pexels: `site:pexels.com [topic]`
+4. All three platforms are equal quality — Pixabay for no-attribution convenience
+5. Verify image exists and note dimensions (target: 1200x630 or wider)
+6. Write descriptive alt text: full sentence, 10-125 chars, topic keywords naturally
+
+## Image Density Calculation
+
+Calculate required images based on content type:
+| Content Type | Image per N Words |
+|-------------|-------------------|
+| Listicle | 1 per 133 words |
+| How-to guide | 1 per 179 words |
+| Long-form/pillar | 1 per 200-250 words |
+| Case study | 1 per 307 words |
+
+## Competitor Content Gap Analysis
+
+When analyzing competition for content gaps:
+1. Search for target keyword + 3-5 related queries
+2. Analyze top 5 results for each
+3. Map what topics/subtopics each competitor covers
+4. Identify: uncovered subtopics, outdated data, missing visual elements, no FAQ section
+5. Rate gap significance: High (no competitor covers) / Medium (1-2 cover weakly) / Low (well-covered)
+
+## Source Tier Verification
+
+Verify every source against this system:
+- **Tier 1**: Google Search Central, .gov, .edu, W3C, international organizations
+- **Tier 2**: Ahrefs, SparkToro, Seer Interactive, BrightEdge, Semrush, academic papers
+- **Tier 3**: Search Engine Land, SEJ, The Verge, Wired, TechCrunch
+- **Tier 4-5 (REJECT)**: Generic SEO blogs, affiliate sites, content mills, unsourced roundups
+
+Verification process:
+1. Check source domain authority/reputation
+2. Check if the statistic has a named methodology
+3. Check if the data appears on the original source (not just re-reported)
+4. Flag stats that only appear on low-authority sites
+
 ## Red Flags (Reject These Sources)
 
 - Round numbers without methodology
