@@ -27,6 +27,31 @@ John Mueller (November 2025): "Our systems don't care if content is created by A
 humans. What matters is whether it's helpful for users." AI as research tool is fine
 — AI as sole content creator without expertise is not.
 
+### SISTRIX Analysis -- Winners & Losers
+
+Post-December 2025 core update visibility shifts (SISTRIX data):
+- Sites with original testing, case studies, and first-hand experience gained visibility
+- 71% of affiliate sites without original testing lost rankings
+- E-E-A-T expanded beyond YMYL to ALL competitive queries — this is the biggest shift
+  since E-A-T was introduced
+- Winners share a common trait: unique data or perspectives AI cannot replicate
+- Losers overwhelmingly produced "consensus content" — rewritten summaries of existing
+  top results with no original contribution
+
+### Quality Rater Guidelines Updates
+
+**September 2025 QRG Update:**
+- Added AI Overview evaluation criteria — raters now assess AI-generated summary accuracy
+- Expanded YMYL definitions to cover broader range of topics affecting wellbeing
+- Key principle codified: "Trust is the most important member of the E-E-A-T family"
+
+**January 2025 QRG Update:**
+- First formal "generative AI" definition added to the guidelines
+- Scaled content abuse explicitly flagged — mass AI generation without human oversight
+  marked as lowest quality
+- Raters instructed to evaluate whether AI-generated content demonstrates genuine
+  expertise or merely mimics it
+
 ## E-E-A-T Framework (Extended December 2025)
 
 **Critical**: December 2025 core update extended E-E-A-T to ALL competitive queries,
@@ -53,6 +78,7 @@ Identifies content from forums, social media, niche blogs where people share
 "first-hand knowledge and personal insights."
 
 - 77% of keyphrases with product reviews show "Discussions and Forums" SERP feature
+- 7,702 of 10,000 keyphrases show "Discussions and Forums" features (Hidden Gems data)
 - Perspectives filter replaced by "Forums" filter (March 2024)
 - User-generated content (YouTube, TikTok, Instagram) appears in carousels
 
@@ -79,6 +105,7 @@ Most AI crawlers cannot execute JS. 72% of first-page results use schema markup.
 ## Google AI Overviews & AI Mode
 
 ### Coverage
+- AI Overviews appear in 49% of SERPs (across all query types)
 - 15-21% global (conservative) to 60% US queries (Advanced Web Ranking, Nov 2025)
 - Doubled from 6.49% (Jan 2025) to 24.61% peak (July 2025), stabilized ~15.69%
 
@@ -119,3 +146,19 @@ Emerging trends reshaping search monetization:
   advertisers (Oct 2025); OpenAI confirmed ad testing in ChatGPT during 2026
 - **Implication for blogs**: Content must be structured for AI agent extraction (clear
   pricing, specs, comparisons) as agentic commerce bypasses traditional click paths
+
+## AI Content Prevalence in Search
+
+- 17.31% of top 20 search results contain AI-generated content (icoda.io)
+- AI-generated content is now embedded across all verticals, not just low-quality niches
+- Google's systems evaluate quality regardless of origin — but the sheer volume of AI
+  content raises the bar for differentiation through original research and experience
+
+## AMP Deprecation
+
+AMP (Accelerated Mobile Pages) is effectively dead:
+- Squarespace deprecated AMP support in February 2025
+- Google removed AMP as a Top Stories ranking requirement in 2021
+- No SEO benefit to AMP implementation — Core Web Vitals replaced AMP's purpose
+- Recommendation: Remove AMP versions if maintaining them creates overhead; focus on
+  native page speed optimization instead

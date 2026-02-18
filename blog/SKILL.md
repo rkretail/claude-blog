@@ -129,6 +129,9 @@ Load on-demand as needed:
 - `references/content-rules.md` — Structure, readability, answer-first formatting
 - `references/visual-media.md` — Image sourcing (Pixabay, Unsplash) + SVG chart integration
 - `references/quality-scoring.md` — Full scoring checklist with point values
+- `references/platform-guides.md` — Platform-specific output formatting (Next.js, Astro, Hugo, Jekyll, WordPress, Ghost, 11ty, Gatsby, HTML)
+- `references/distribution-playbook.md` — Content distribution strategy (Reddit, YouTube, LinkedIn, Twitter/X, Email, Reviews)
+- `references/content-templates.md` — Content type template index and selection guide (12 templates)
 
 ## Sub-Skills
 

@@ -100,7 +100,29 @@ date: "YYYY-MM-DD"
 | Distribution | Spread evenly — never cluster images |
 | Count | 3-5 images per 2,000-word post |
 | Relevance | Must relate to adjacent content |
-| Format | WebP preferred, JPEG acceptable |
+| Format | AVIF preferred, WebP fallback, JPEG last resort |
+
+### Image Density by Content Type
+
+Optimal image frequency varies by post format (THM SEO Agency data):
+
+| Content Type | Image Density | Example (2,000-word post) |
+|-------------|---------------|---------------------------|
+| Listicles | 1 image per 133 words | ~15 images |
+| How-to guides | 1 image per 179 words | ~11 images |
+| Long-form analysis | 1 image per 200-250 words | ~8-10 images |
+| Case studies | 1 image per 307 words | ~6-7 images |
+
+Articles with an image every 75-100 words get 2x more social shares (BuzzSumo).
+Balance density against page weight — use optimized formats (AVIF/WebP) to keep
+total image payload under 500KB.
+
+### SVG Impact on Engagement
+
+D.C. Thomson case study results after replacing raster images with contextual SVGs:
+- Session duration doubled
+- 317% increase in read-to-completion rate
+- SVGs are resolution-independent, lightweight, and dark-mode compatible
 
 ### Alt Text Guidelines
 - Full descriptive sentence including topic keywords naturally
@@ -110,6 +132,11 @@ date: "YYYY-MM-DD"
 
 Good: `Marketing team analyzing AI search traffic data on a dashboard showing citation metrics`
 Bad: `SEO AI marketing blog optimization image`
+
+**AI Systems and Images**: AI crawlers read alt text and captions, NOT the images
+themselves. Write context-rich alt text that conveys the data or insight the image
+represents. For charts, include the key data point in the alt text. For screenshots,
+describe what the screenshot demonstrates.
 
 ### Embedding Images
 
@@ -142,6 +169,81 @@ images: {
        width="1200" height="630" loading="lazy">
   <figcaption>Photo via Pixabay</figcaption>
 </figure>
+```
+
+---
+
+## Image Format Optimization
+
+### AVIF as Primary Format
+
+AVIF is the recommended image format for 2026:
+- ~50% smaller than JPEG at equivalent quality
+- ~20-30% smaller than WebP
+- 93.8% global browser support (caniuse, Jan 2026)
+- Supports HDR, wide color gamut, and transparency
+
+### `<picture>` Element with Progressive Fallback
+
+Always use the `<picture>` element for format negotiation:
+
+```html
+<picture>
+  <source srcset="image.avif" type="image/avif">
+  <source srcset="image.webp" type="image/webp">
+  <img src="image.jpg" alt="Descriptive alt text" width="1200" height="630" loading="lazy">
+</picture>
+```
+
+This pattern serves AVIF to supporting browsers, falls back to WebP, then JPEG.
+
+### LCP Image Rules
+
+**NEVER** use `loading="lazy"` on hero/LCP (Largest Contentful Paint) images.
+Lazy loading the LCP image delays the largest element on the page and directly
+harms Core Web Vitals scores.
+
+For hero/above-the-fold images:
+```html
+<img src="hero.avif" alt="..." width="1200" height="630"
+     fetchpriority="high" decoding="async">
+```
+
+For below-the-fold images:
+```html
+<img src="image.avif" alt="..." width="800" height="450"
+     loading="lazy" decoding="async">
+```
+
+### Dark Mode Image Support
+
+Use `<picture>` with `prefers-color-scheme` media query for theme-aware images:
+
+```html
+<picture>
+  <source srcset="chart-dark.avif" media="(prefers-color-scheme: dark)" type="image/avif">
+  <source srcset="chart-dark.webp" media="(prefers-color-scheme: dark)" type="image/webp">
+  <source srcset="chart-light.avif" type="image/avif">
+  <source srcset="chart-light.webp" type="image/webp">
+  <img src="chart-light.jpg" alt="Descriptive alt text" width="800" height="450">
+</picture>
+```
+
+CSS variable pattern for inline SVG dark mode:
+```css
+:root {
+  --chart-bg: #ffffff;
+  --chart-text: #111827;
+  --chart-grid: rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --chart-bg: transparent;
+    --chart-text: #f3f4f6;
+    --chart-grid: rgba(255, 255, 255, 0.08);
+  }
+}
 ```
 
 ---

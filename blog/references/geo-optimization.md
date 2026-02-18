@@ -15,6 +15,15 @@ GEO methods boost AI visibility by up to 40%.
 
 Traditional keyword stuffing performs **worse than baseline** in generative engines.
 
+### Cross-Platform Citation Divergence
+
+- Only 12% of sources cited match across ChatGPT, Perplexity, and AI Overviews
+  (Digital Bloom, 2025) — each platform has distinct citation preferences
+- 80% of LLM citations don't rank in Google's top 100 (Ahrefs, Aug 2025) — traditional
+  SEO rankings are a poor predictor of AI citation
+- Brands are 6.5x more likely to be cited through third-party sources than their own
+  domains (AirOps, Oct 2025) — earned media dominates AI visibility
+
 ### Kevin Indig's AI Search Pipeline (Jan 5, 2026)
 Three critical stages:
 
@@ -39,6 +48,22 @@ Three critical stages:
 | Answer-first formatting | +340% improvement | Seenos |
 | FAQ schema | +28% increase | Search Engine Land |
 | Content with statistics | +40% higher citation rates | Onely |
+| Sections of 120-180 words between headings | 70% more ChatGPT citations | SE Ranking, Nov 2025 |
+| Comparison tables with `<thead>` | 47% higher AI citation rates | SEL experiment |
+
+## Platform-Specific Citation Patterns
+
+Each AI platform has distinct content preferences:
+
+| Platform | Favored Content Type | Key Bias |
+|----------|---------------------|----------|
+| ChatGPT | "Best X" listicles | 43.8% of citations are list-format content |
+| Perplexity | Reddit discussions | 6.6% of all citations come from Reddit |
+| AI Overviews | Google properties | 23% of citations favor Google-owned sources |
+
+**Perplexity content decay**: Citation relevance begins declining 2-3 days
+post-publication — Perplexity heavily weights recency, making it the most
+freshness-dependent platform. Content older than 1 week sees sharp citation drops.
 
 ## Content Freshness Requirements
 
@@ -102,6 +127,14 @@ Recommended: **40% owned content / 60% earned media**
 
 **Critical**: Content behind JavaScript is invisible to ChatGPT, Claude, Perplexity.
 Use SSR, SSG, or ISR. Test by disabling JS and reloading.
+
+### AI Crawler Traffic Growth
+
+- Cloudflare AI crawling rose 32% YoY across all monitored sites
+- GPTBot traffic grew 305% YoY
+- PerplexityBot traffic grew 157,490% YoY (from near-zero baseline)
+- 65% of AI bot hits target content published within the past year (Seer Interactive)
+  — freshness is a retrieval signal, not just a citation signal
 
 ### Performance Requirements for AI Retrieval
 - Server response time under 200ms TTFB (Kevin Indig pipeline)

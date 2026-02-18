@@ -22,11 +22,44 @@ AI systems extract answers from section openers. If your answer is buried in
 paragraph 3 of a section, it will not be cited. Lead with the answer, then
 explain.
 
+## Title Optimization
+
+| Parameter | Target | Impact |
+|-----------|--------|--------|
+| Character length | 40-60 characters | 8.9% higher CTR (Backlinko) |
+| Sentiment | Positive framing | +4.1% CTR vs neutral titles |
+| Brackets/parentheses | Include when relevant | ~40% more clicks (HubSpot) |
+| Power words | 1-2 per title | "Definitive," "Essential," "Data-Backed" |
+| Keyword placement | Front-loaded | Primary keyword in first 3 words when possible |
+
+### Title Formula
+Pattern: `[Power Word] [Topic]: [Specific Outcome/Number] [Year]`
+Example: "Definitive Guide to GEO: 7 Strategies That Drive AI Citations in 2026"
+
+Avoid: clickbait, ALL CAPS words, excessive punctuation, vague promises.
+
+## TL;DR Box Requirement
+
+Every post must open with a TL;DR summary box immediately after the title/intro:
+
+- **Length**: 40-60 words (standalone summary)
+- **Purpose**: AI extraction target — LLMs frequently cite these verbatim
+- **Content**: 2-3 sentences covering the core finding/argument with one key statistic
+- **Format**: Visually distinct block (callout, bordered box, or blockquote)
+- **Rule**: Must be comprehensible without reading the rest of the article
+
+### Pattern
+```markdown
+> **TL;DR**: [Core finding with statistic] ([Source], year). [1-2 sentences
+> explaining the main takeaway and what the reader should do about it.]
+```
+
 ## Heading Hierarchy
 
 ### Rules
 - ONE H1 per page (the title only)
 - H2s for main sections (target 6-8 per post)
+- H2 every 150-200 words — maintain consistent heading frequency for scannability
 - H3s for subsections — never skip levels (no H1 → H3)
 - Include primary keyword naturally in 2-3 headings
 
@@ -52,13 +85,26 @@ show these in People Also Ask. Users scan headings as questions they want answer
 Start each paragraph with the most important sentence. This enables both
 readers and AI to grasp concepts by scanning.
 
+### Paragraph Sentence Limit
+Maximum 2-3 sentences per paragraph. This is a hard rule. Single-sentence
+paragraphs are acceptable and often preferred for emphasis. Paragraphs
+exceeding 3 sentences should be split.
+
 ## Readability Targets
 
 | Metric | Target | Why |
 |--------|--------|-----|
-| Flesch Reading Ease | 60-70 | Grade level 8-10, accessible to general audience |
-| Flesch-Kincaid Grade | 8-10 | Not too simple, not too academic |
+| Flesch Reading Ease | 45-60 | Optimal for ranking (Originality.AI study) |
+| Flesch-Kincaid Grade | 10-12 | Expert-accessible, not oversimplified |
 | Language style | Conversational | Mirrors how people ask questions |
+
+**Updated guidance**: Flesch-Kincaid 45-60 is the optimal range for ranking, not 60-70
+as previously believed (Originality.AI, 2025). Content that is too simple underperforms
+because it lacks the depth and specificity that signals expertise.
+
+62% of high-performing posts score "easy" on readability tools (Semrush), but "easy"
+in Semrush's scale corresponds to Flesch 45-60 for expert topics — not dumbed-down
+content. The key is clear expression of complex ideas, not avoidance of complexity.
 
 AI systems prefer natural, conversational language. But readability alone
 doesn't determine AI citation — content must also demonstrate expertise
@@ -78,17 +124,27 @@ Long-form (2,000+ words) gets 3x more AI citations than short posts.
 
 ## Information Gain -- The Key Differentiator
 
-Google's 2022 patent promotes content based on uniqueness. AI can synthesize
-consensus but cannot create new data. Optimize by:
+Google's Information Gain patent (US11354342B2, 2022) explicitly promotes content
+that provides new information not found in existing top-ranking results. The patent
+describes a scoring system that rewards documents containing novel data points,
+perspectives, or evidence beyond what the current SERP already covers.
+
+AI can synthesize consensus but cannot create new data. Optimize by:
 
 1. **Original research**: Surveys, proprietary data, experiments
 2. **Personal perspective**: Opinions AI cannot replicate
 3. **Expert interviews**: Practitioners with first-hand knowledge
 4. **Case studies**: Real metrics and results
 5. **Process documentation**: "Building in public" content
+6. **Industry-segmented analysis**: Break down findings by vertical/niche
 
 B2B SaaS websites conducting original research saw 25.1% average increase
 in top-10 rankings (Stratabeat study).
+
+**Animalz finding**: Industry-segmented content (breaking down advice/data by
+specific verticals rather than giving generic recommendations) achieved +43.4%
+top-10 rankings compared to non-segmented equivalents. Specificity beats
+generality in both traditional and AI search.
 
 ## Meta Description Formula
 
