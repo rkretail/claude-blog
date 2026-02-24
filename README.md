@@ -11,6 +11,12 @@
 
 Strategy, briefs, calendars, writing, optimization, schema, repurposing, and full-site audits — all from slash commands. Dual-optimized for Google rankings and AI citation platforms (ChatGPT, Perplexity, AI Overviews).
 
+### Watch the Demo
+
+[![Claude Blog Demo](https://img.youtube.com/vi/AeLC4iutG8w/maxresdefault.jpg)](https://www.youtube.com/watch?v=AeLC4iutG8w)
+
+> 12 skills. 4 AI agents. Full blog creation from a single slash command — sourced statistics, SVG charts, images, FAQ schema, and a quality score. All open source.
+
 ![Blog commands demo](assets/blog-command-demo.gif)
 ---
 
