@@ -8,8 +8,8 @@ set -euo pipefail
 #   curl -sL https://raw.githubusercontent.com/AgriciDaniel/claude-blog/main/install.sh | bash
 
 main() {
-    local SKILL_DIR="${HOME}/.claude/skills"
-    local AGENT_DIR="${HOME}/.claude/agents"
+    local SKILL_DIR="./.claude/skills"
+    local AGENT_DIR="./.claude/agents"
     local SCRIPT_DIR
     local TEMP_DIR=""
 
