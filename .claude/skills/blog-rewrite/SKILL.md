@@ -21,6 +21,8 @@ allowed-tools:
   - Task
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog Rewriter -- Optimize Existing Posts
 
 Rewrites and optimizes existing blog posts for dual ranking: Google search

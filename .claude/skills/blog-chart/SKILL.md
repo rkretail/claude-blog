@@ -17,6 +17,8 @@ allowed-tools:
   - Grep
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog Chart -- Built-In SVG Data Visualization
 
 Generates dark-mode-compatible inline SVG charts for blog posts. Invoked

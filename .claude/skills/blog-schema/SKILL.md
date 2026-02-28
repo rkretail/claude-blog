@@ -13,6 +13,8 @@ allowed-tools:
   - Glob
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog Schema -- JSON-LD Structured Data Generation
 
 Generates complete, validated JSON-LD schema markup for blog posts using the

@@ -15,6 +15,8 @@ allowed-tools:
   - WebFetch
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog GEO -- AI Citation Optimization Audit
 
 Scores blog posts for AI citation readiness across ChatGPT, Perplexity, and

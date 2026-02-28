@@ -13,6 +13,8 @@ allowed-tools:
   - Glob
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog Repurpose -- Cross-Platform Content Adaptation
 
 Transforms blog posts into platform-optimized content for social media, email,

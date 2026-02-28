@@ -20,6 +20,8 @@ allowed-tools:
   - Task
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog Strategy -- Positioning & Content Architecture
 
 Develops comprehensive blog strategies that build topical authority for

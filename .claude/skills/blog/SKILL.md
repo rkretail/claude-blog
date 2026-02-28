@@ -27,6 +27,8 @@ allowed-tools:
   - Task
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog -- Content Engine for Rankings & AI Citations
 
 Full-lifecycle blog management: strategy, briefs, outlines, writing, analysis,

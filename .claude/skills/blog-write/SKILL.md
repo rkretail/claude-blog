@@ -21,6 +21,8 @@ allowed-tools:
   - Task
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog Writer -- New Article Generation
 
 Writes complete blog articles from a topic, brief, or outline. Every article

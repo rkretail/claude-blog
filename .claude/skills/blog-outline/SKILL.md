@@ -18,6 +18,8 @@ allowed-tools:
   - WebFetch
 ---
 
+> **Company Context:** Read `/.claude/skills/legalfidelity.md` before proceeding. Use the company name, brand voice, target audience, services, and CTAs defined there for all content produced by this skill.
+
 # Blog Outline Generator -- SERP-Informed Structure Planning
 
 Generates skeletal blog post outlines informed by SERP analysis. A lighter
